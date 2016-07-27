@@ -1,0 +1,19 @@
+body {
+  background-color: #EEE;
+  padding: 10px;
+  width: 780px;
+  font-family: Georgia, Helvetica, Arial;
+}
+
+#container {
+  background-color: #ff8c1a;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#header {
+  background-color: #ff8c1a;
+  color: black;
+  text-align: 
+}
