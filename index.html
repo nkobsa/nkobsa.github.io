@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<title>My Old Kentucky Home</title>
+			<link rel="stylesheet" href="style.css" type="text/css" />
+
+		</head>
+
+		<body>
+			<h1 id="title">My Old Kentucky Home</h1>
+
+			<video src="https://www.cs.tufts.edu/comp/20/my_old_kentucky_home.mp4" id="music_video" controls></video>
+			<div id="lyrics"></div>
+
+			<button onclick="playvideo();">Start Sing Along!</button>
+			<button onclick="pausevideo();">Pause</button>
+
+			<p>Song Timer: <span id="timer"></span></p>
+
+		<script>
+			var vid = document.getElementById("music_video");
+			var lyrics = document.getElementById("lyrics");
+			var photo = document.getElementById("photo");
+			
+			function playvideo() {
+				vid.play();
+			}
+			function pausevideo() {
+				vid.pause(); 
+			}
+
+			vid.ontimeupdate = function() {Timer()};
+
+			function Timer() {
+				document.getElementById("timer").innerHTML = vid.currentTime;
+			}
+
+		</script>
+
+			video.addEventListener("timeupdate", function() {
+				console.log("Button was pressed!");
+
+				if (video.currentTime < 35) {
+						lyrics.innerHTML = 
+							<p>"The sun shines bright in My Old Kentucky Home,'Tis summer, the people are gay, The corn-top's ripe and the meadow's in the bloom, While the birds make music all the day."</p>
+				}
+				</script>
+
+				<<!-- else if (video.currentTime > 35) && (video.currentTime < 50) {
+					lyrics.innerHTML = <ul>"The young folks roll on the little cabin floor <ul>All merry, all happy and bright <ul> By 'n' by hard times comes a knocking at the door. <ul> Then My Old Kentucky Home, good night!" </ul>;
+				}
+
+				else if (video.currentTime > 10) && (video.currentTime < 35) {
+					lyrics.innerHTML = '<p><img src="KentuckyFarm.jpg" alt="A Farm in Kentucky" /></p>';
+				}
+
+				else if (video.currentTime > 50) {
+					lyrics.innerHTML = <ul>"Weep no more my lady" <ul>"Oh weep no more today;" <ul> "We will sing one song", <ul> "For My Old Kentucky Home... For My Old Kentucky Home, far away"
+					</ul>;
+				 }
+				 else if (video.currentTime > 30) && (video.currentTime < 50) {
+						lyrics.innerHTML = '<p><img src="KentuckyHorse.jpg" alt="A Horse from Kentucky" /></p>';
+				}
+				 else {
+				 	lyrics.innerHTML ="";
+				}
+			} 
+			}, false);
+			-->
+</body>
+</html>	
